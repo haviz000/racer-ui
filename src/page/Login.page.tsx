@@ -8,7 +8,7 @@ export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     mutate({ username, password });
   };
@@ -45,7 +45,7 @@ export default function Login() {
           <button type="submit" className="login-button">
             Sign In
           </button>
-          {error && <p className="error-message">{error}</p>}
+          {error && <p className="error-message">{error.message}</p>}
         </form>
       </div>
     </div>

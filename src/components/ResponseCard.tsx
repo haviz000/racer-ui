@@ -1,7 +1,22 @@
-import React from "react";
 import "./response-card.css";
 
-export default function ResponseCard({ data }) {
+interface ResultItem {
+  code_response: number;
+  status_text: string;
+  count_code: number;
+}
+
+interface ResponseData {
+  total_request: number;
+  total_time: number;
+  result: ResultItem[];
+}
+
+interface ResponseCardProps {
+  data: ResponseData | null;
+}
+
+export default function ResponseCard({ data }: ResponseCardProps) {
   if (!data) return null;
 
   return (

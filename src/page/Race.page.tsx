@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useRaceTest } from "../queries/race.query";
 import "./request-form.css";
 import ResponseCard from "../components/ResponseCard";
